@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>Hanoi</h1>
+    </div>
+    <div class="nav">
+        <a href="LangBac.html">Ho Chi Minh's Mausoleum </a>
+        <a href="NgocThuyPark.html">Ngoc Thuy Park</a>
+        <a href="Sheraton.html">Sheraton Hanoi</a>
+        <a href="HanoiOperaHouse.html">Hanoi Opera House</a>
+        <a href="HanoiMuseum.html">Hanoi Museum</a>
+        <a href="MoMarket.html">Mo Market</a>
+    </div>
+    <div class="flex-container">
+        <div class="content">
+            <div class="tabcontent" id="area1">
+                <h3>Ho Chi Minh's Mausoleum</h3>
+                <p>The President Ho Chi Minh Mausoleum is a mausoleum which serves as the resting place of Vietnamese revolutionary leader and President Ho Chi Minh in Hanoi, Vietnam.</p>
+            </div>
+            <div class="tabcontent" id="area2">
+                <h3>Ngoc Thuy Park</h3>
+                <p>The modernest park you can find in Long Bien District, Hanoi.</p>
+            </div>
+            <div class="tabcontent" id="area3">
+                <h3>Sheraton Hanoi</h3>
+                <p>The hotel provides the perfect balance between tranquility and convenience. Situated on the shore of Hanoi's largest lake, Sheraton Hanoi Hotel features the panoramic views of lush greenery around the West Lake and Red River from many of its 299 rooms and suites.</p>
+            </div>
+            <div class="tabcontent" id="area4">
+                <h3>Hanoi Opera House</h3>
+                <p>The Hanoi Opera House, or the Grand Opera House is an opera house in central Hanoi, Vietnam. It was erected by the French colonial administration between 1901 and 1911.</p>
+            </div>
+            <div class="tabcontent" id="area5">
+                <h3>Hanoi Museum</h3>
+                <p>The Museum of Hanoi is located in Nam Tu Liem district of Hanoi, Vietnam. The museum displays artifacts from Hanoi's 1000-year history and the history, culture, heritage, and architecture of Vietnam. It showcases over 50,000 artifacts in a total area of nearly 54,000 square meters</p>
+            </div>
+            <div class="tabcontent" id="area6">
+                <h3>Mo Market</h3>
+                <p>Mo Market, now located on Bach Mai street, is a more than 100-year-old market in Hanoi city. In the history books of the Nguyen Dynasty, this place was described as "a large market in the province", meeting 6 times a month, trading all kinds of goods. People from all over the world flocked to Mo Market to buy and sell via the Kim Nguu River or the road. Thien Ly (the road through Vietnam since the early 19th century).
+                </p>
+            </div>
+        </div>
+        <div class="sidebar">
+        <img src="MyMap.png" width="700px" height="500px" usemap="#mymap">
+        <map name="mymap">
+            <area href="LangBac.html" shape="rect" coords="415,200,425,250" title="Ho Chu MInh's Mausoleum" alt="Ho Chu MInh's Mausoleum" onmouseover="openDescription(event, 'area1')">
+            <area href="NgocThuyPark.html" shape="rect" coords="525,140,575,150" title="Ngoc Thuy Park" alt="Ngoc Thuy Park " onmouseover="openDescription(event, 'area2')">
+            <area href="Sheraton.html" shape="rect" coords="380,130,420,150" title="Sheraton Hanoi" alt="Sheraton Hanoi" onmouseover="openDescription(event, 'area3')">
+            <area href="HanoiOperaHouse.html" shape="circle" coords="510,295,20" title="Hanoi Opera House" alt="Hanoi Opera House" onmouseover="openDescription(event, 'area4')">
+            <area href="HanoiMuseum.html" shape="circle" coords="235,355,20" title="Hanoi Museum" alt="Hanoi Museum" onmouseover="openDescription(event, 'area5')">
+            <area href="MoMarket.html" shape="poly" coords="480,380,530,430,510,440,450,440.420,400" title="Mo Market" alt="Mo Market" onmouseover="openDescription(event, 'area6')">
+
+
+        </map>
+        </div>
+    </div>
+    <script>
+        function openDescription(Ev, area) {
+            var i, tabcontent;
+            tabcontent = document.getElementsByClassName('tabcontent')
+            for(i=0; i <tabcontent.length; i++){
+                tabcontent[i].style.display = "none";
+            }
+            document.getElementById(area).style.display= "block";
+            Ev.currentTarget.className += "active";
+        }
+    </script>
+    <footer>
+        <h2>Webpage developped by Bao Anh</h2>
+    </footer>
+</body>
+</html>

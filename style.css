@@ -1,0 +1,54 @@
+.header {
+    background: #322D31;
+    color: white;
+    padding: 2em;
+    text-align: center;
+}
+
+.nav {
+    background: aqua;
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+}
+.nav a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: left;
+    justify-content: space-around;
+}
+.flex-container>.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-container>.mymap {
+    flex-direction: row;
+}
+
+.sidebar {
+    background-color: white;
+    padding: 10px;
+    float: right;
+}
+footer {
+    background: grey;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
+.tabcontent{
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    height: 300px;
+    border-left: none;
+    display: none;
+}
